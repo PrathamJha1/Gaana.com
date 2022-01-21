@@ -1,0 +1,26 @@
+.SecondNav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 40px;
+    flex-wrap: wrap;
+    color:grey;
+    margin-top: 75px;
+    z-index: 1100
+}
+.list{
+    list-style: none;
+    border-bottom:2px solid white;
+}
+.list:hover{
+    border-bottom:2px solid red;
+}
+li{
+    list-style: none;
+}
+.adjust{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

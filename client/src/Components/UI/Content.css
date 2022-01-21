@@ -1,0 +1,67 @@
+.content{
+    display: flex;
+    align-items: flex-start;
+    column-gap: 50px;
+}
+.Internalcontent{
+    z-index:-1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 2%;
+    height: 100%;
+    width:1096px;
+}
+.carousal {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width:1100px;
+  }
+  .carousel{
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width:1100px;
+  }
+  .footerelement{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 5px;
+  }
+  a{
+      text-decoration: none;
+      color:grey;
+  }
+  .links{
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      column-gap: 100px;
+  }
+  .footer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .about{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+  .about p{
+      padding:0 230px;
+      font-size: 14px;
+      text-align: justify;
+  }
