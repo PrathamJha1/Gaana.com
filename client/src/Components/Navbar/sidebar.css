@@ -1,0 +1,11 @@
+.List{
+    position: fixed;
+    width:237px;
+    display: flex;
+    height:1000px;
+    background-color:floralwhite;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index:1200;
+}
