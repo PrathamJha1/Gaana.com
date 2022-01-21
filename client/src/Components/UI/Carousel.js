@@ -4,7 +4,7 @@ import CardElement from "./CardElement"
 import "./Content.css";
 import spotifyWebApi from "spotify-web-api-node";
 import {useState,useEffect} from "react";
-const spotifyApi = new spotifyWebApi({clientId:"b03ceec374c242ec804f1da219af1d80"})
+const spotifyApi = new spotifyWebApi({clientId:process.env.REACT_APP_CLIENT_ID})
 const breakPoints = [
   { width: 1, itemsToShow: 1},
   { width: 550, itemsToShow: 3 },

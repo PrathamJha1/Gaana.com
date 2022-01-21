@@ -16,7 +16,7 @@ import SecondNav from './SecondNav';
 import SearchIcon from '@mui/icons-material/Search';
 import "./Navbar.css";
 import spotifyWebApi from "spotify-web-api-node";
-const spotifyApi = new spotifyWebApi({clientId:"b03ceec374c242ec804f1da219af1d80"})
+const spotifyApi = new spotifyWebApi({clientId:process.env.REACT_APP_CLIENT_ID});
 
 export default function Navbar(props) {
   const accessToken = props.accessToken;
