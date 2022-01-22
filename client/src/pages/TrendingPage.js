@@ -4,15 +4,19 @@ import { Fragment } from "react";
 import {Container} from "@mui/material";
 import {useState,useEffect} from "react";
 import spotifyWebApi from "spotify-web-api-node";
-// import Rightbar from "../Components/Rightbar";
 import ContentContainer from "../Components/Body/ContentContainer"
-const spotifyApi = new spotifyWebApi({clientId:"b03ceec374c242ec804f1da219af1d80"})
+const spotifyApi = new spotifyWebApi({clientId:process.env.REACT_APP_CLIENT_ID})
 export default function TrendingPage(props){
+  const accessToken = props.accessToken;
     const [result,setresult]=useState([]);
     const chooseTrack = (track)=>{
       // console.log("set");
       props.setcurrentTrack(track);
     }
+    useEffect(()=>{
+      if(!accessToken)return;
+      spotifyApi.setAccessToken(accessToken);
+    },[accessToken]);
     useEffect(()=>{
       spotifyApi.searchTracks("trending").then(res=>{
         // console.log(res.body.tracks.items);
@@ -32,7 +36,7 @@ export default function TrendingPage(props){
 
     return (
         <Fragment>
-            <Navbar accessToken={props.accessToken}/>
+            <Navbar accessToken={props.accessToken} setcurrentTrack={props.setcurrentTrack}/>   
                 <Container fixed sx={{display: 'flex',flexWrap:'wrap',alignItems:'center',justifyContent: 'center',gap:'30px',padding:'2%'}}>
                     {result.map(track=>(
                         <ContentContainer key={track.uri} track={track} chooseTrack={chooseTrack}/>

@@ -6,7 +6,7 @@ import {useState,useEffect} from "react";
 import spotifyWebApi from "spotify-web-api-node";
 import ContentContainer from "../Components/Body/ContentContainer"
 const spotifyApi = new spotifyWebApi({clientId:process.env.REACT_APP_CLIENT_ID})
-export default function Albumspage(props){
+export default function Podcast(props){
     const [result,setresult]=useState([]);
     const chooseTrack = (track)=>{
       // console.log("set");
@@ -17,7 +17,7 @@ export default function Albumspage(props){
         spotifyApi.setAccessToken(props.accessToken);
       },[props.accessToken]);
     useEffect(()=>{
-      spotifyApi.searchTracks("albums").then(res=>{
+      spotifyApi.searchTracks("podcast").then(res=>{
         // console.log(res.body.tracks.items);
         setresult(res.body.tracks.items.map(track=>{
           const smallestAlbumImage=track.album.images.reduce((smallest,image)=>{

@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    <App style={{height:'100%',overflow:'auto'}}/>
   </BrowserRouter>,
   document.getElementById('root')
 );
