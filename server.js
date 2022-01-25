@@ -1,8 +1,10 @@
 const express = require('express');
+const path=require('path');
 const spotifyWebApi = require('spotify-web-api-node');
 const cors =require('cors');
 require('dotenv').config()
 const app=express();
+const Port = process.env.PORT || 3001;
 const bodyParser =require('body-parser');
 app.use(cors());
 app.use(bodyParser.json());
@@ -45,6 +47,15 @@ app.post('/login',(req,res)=>{
         res.sendStatus(400);
     })
 });
-app.listen('3001',()=>{
+
+//Serve production 
+if(process.env.NODE_ENV === 'production'){
+    app.use(express.static('client/build'));
+    app.get('*',(req,res)=>{
+        res.sendFile(path.resolve(__dirname,'client','build','index.html'));
+    })
+}
+
+app.listen(Port,()=>{
     console.log("Server is running on port 3001");
 })
