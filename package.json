@@ -11,10 +11,11 @@
     "express": "^4.17.2",
     "mongoose": "^6.1.7",
     "node-modules": "^1.0.1",
-    "nodemon": "^2.0.15",
     "spotify-web-api-node": "^5.0.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
   "scripts": {
     "build": "cd client && npm run build",
     "install": "cd client && npm install",
