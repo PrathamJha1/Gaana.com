@@ -5,7 +5,7 @@ import "./sidebar.css";
 function Sidebar(){
     return (
         <Box>
-            <List className='List' style={{maxHeight:'717px',overflow:'auto',position:'fixed',marginTop:'67px'}}>
+            <List className='List' style={{maxHeight:'710px',overflow:'auto',position:'fixed',marginTop:'67px'}}>
                 <List>
                 
                     <ListItem>
@@ -30,6 +30,8 @@ function Sidebar(){
                     <ListItem><Link to="/albums">Albums</Link></ListItem>
                     <ListItem><Link to='/artist'>Artists</Link></ListItem>
                     <ListItem><Link to="/Lyrics">Lyrics</Link></ListItem>
+                    <ListItem><Link to='/music-labels'>Music Labels</Link></ListItem>
+                    <ListItem><Link to="/genres">Genres</Link></ListItem>
                 </List>
                 
             </List>
