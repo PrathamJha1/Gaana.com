@@ -30,8 +30,6 @@ function Sidebar(){
                     <ListItem><Link to="/albums">Albums</Link></ListItem>
                     <ListItem><Link to='/artist'>Artists</Link></ListItem>
                     <ListItem><Link to="/Lyrics">Lyrics</Link></ListItem>
-                    <ListItem><Link to='/music-labels'>Music Labels</Link></ListItem>
-                    <ListItem><Link to="/genres">Genres</Link></ListItem>
                 </List>
                 
             </List>
