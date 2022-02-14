@@ -2,11 +2,13 @@ import React, { useEffect } from "react";
 import Carousel from "react-elastic-carousel";
 import SliderCard from "./SliderCard";
 import spotifyWebApi from "spotify-web-api-node";
-import "./Content.css";
+import "../Body/Content.css";
+import "../responsive.css";
 import {useState} from "react";
 const spotifyApi = new spotifyWebApi({clientId:process.env.REACT_APP_CLIENT_ID})
 const breakPoints = [
-  { width: 1, itemsToShow: 2 }
+  {width: 1, itemsToShow:1},
+  { width: 700, itemsToShow: 2 }
 ];
 
 export default function ImageSlider(props) {

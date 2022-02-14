@@ -5,7 +5,7 @@ import "./sidebar.css";
 function Sidebar(){
     return (
         <Box>
-            <List className='List' style={{maxHeight:'710px',overflow:'auto',position:'fixed',marginTop:'67px'}}>
+            <List className='List' style={{maxHeight:'695px',overflow:'auto',position:'fixed',marginTop:'62px'}}>
                 <List>
                 
                     <ListItem>

@@ -1,3 +1,6 @@
+.box{
+    height:121px;
+}
 .nav {
     display: flex;
     align-items: center;
@@ -8,7 +11,7 @@
     background: rgba(138,137,142,.5);
 }
 
-.RedButton {
+.RedButton1,.RedButton2 {
     color: red;
     border-radius: 50%;
     border-color: red;
@@ -30,7 +33,7 @@
     justify-content: center;
     column-gap: 50px;
 }
-.RedButton {
+.RedButton1,.RedButton2 {
     -webkit-border-radius: 28;
     -moz-border-radius: 28;
     border-radius: 28px;
@@ -43,12 +46,12 @@
     text-decoration: none;
 }
 
-.RedButton:hover {
+.RedButton1:hover,.RedButton2:hover {
     border: solid #ff0000a3 2px;
     color: #ff0000a3;
 }
 
-.RedButton span {
+.RedButton1 span,.RedButton2 span{
     position: absolute;
     margin-top: -14px;
     margin-left: -8px;
@@ -83,4 +86,18 @@ form{
     display: flex;
     padding: 1%;align-items: center;
     width:572px;
+}
+@media only screen and (max-width:1000px){
+    
+    .box{
+        height:65px;
+        z-index:1600;
+        position:fixed;
+    }
+    .nav{
+        column-gap: 10px;
+    }
+    .Navbox{
+        background-color:darkgrey;
+    }
 }

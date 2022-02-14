@@ -1,4 +1,4 @@
-import "./Content.css"
+import "../Body/Content.css";
 export function FooterElement(){
     return (<div className="footerelement">
 

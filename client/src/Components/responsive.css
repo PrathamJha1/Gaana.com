@@ -1,0 +1,133 @@
+.card{
+    max-width:350px;
+    width:150px;
+    cursor:pointer;
+}
+.cardImage{
+    height:100px;
+}
+.Searchbar{
+    overflow:auto;
+    background-color:white;
+    position:fixed;
+    height:251px;
+    width:548px;
+    margin-left:24px;
+    margin-top:282px;
+    z-index:1201;
+    border-top:1px solid grey;
+    box-shadow:0px 10px 12px 4px #888888;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:flex-start;
+    row-gap:5px;
+}
+.footitems{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    column-gap:'20px';
+    font-size:12px;
+    border-bottom:0.5px solid grey;
+    width:100%;
+    padding-bottom:15px;
+
+}
+.slider{
+    height:400px;
+}
+@media only screen and (max-width:1400px){
+    .Internalcontent{
+        width:950px;
+    }
+    .nav{
+        align-items: flex-start;
+    }
+    .Iconbuttons,.icons{
+        display:none
+    }
+    .slider{
+        height:350px;
+    }
+}
+@media only screen and (max-width:1232px){
+    .RightFloater{
+        display:none;
+    }
+    .Internalcontent{
+        width:1000px;
+    }
+    .RedButton2{
+        display:none;
+    }
+}
+@media only screen and (max-width:1182px){
+    .slider{
+        height: 300px;
+    }
+}
+@media only screen and (max-width:1000px){
+    .Navshow{
+        display:none;
+    }
+    .Internalcontent{
+        margin-top: 100px;
+        width:700px;
+        padding-left:10%;
+    }
+    .RedButton1{
+        display: none;
+    }
+}
+@media only screen and (max-width:800px){
+    .search{
+        width:450px;
+    }
+    .footitems{
+        column-gap:5px;
+        font-size:10px;
+    }
+    .search form{
+        width:450px;
+    }
+    .Internalcontent{
+        width:600px;
+    }
+    .about p{
+        font-size:12px;
+        padding: 0 130px;
+    }
+    .Searchbar{
+        width:426px;
+    }
+}
+@media only screen and (max-width:600px){
+    .Internalcontent{
+        align-items:flex-start;
+        width:500px;
+    }
+    .search form{
+        width:300px;
+    }
+    .search{
+        width:300px;
+    }
+    .Searchbar{
+        width:276px;
+    }
+}
+@media only screen and (max-width:500px){
+    .Internalcontent{
+        width:450px;
+        padding: 0;
+    }
+    .card{
+        width: 100px;
+        max-width: 150px;
+    }
+    .slider{
+        width:200px;
+        height:200px;
+    }
+}

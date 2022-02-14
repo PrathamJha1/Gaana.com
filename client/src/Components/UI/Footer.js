@@ -1,4 +1,4 @@
-import "./Content.css";
+import "../Body/Content.css";
 import { FooterElement } from "./FooterElement";
 import "https://kit.fontawesome.com/75e360d1be.js"
 export default function Footer(){
@@ -13,7 +13,7 @@ Gaana is the one-stop solution for all your music needs. Gaana offers you free, 
                 <a href="/" style={{color:'#3b5998'}}><i class="fab fa-facebook fa-2x"></i></a>
                 <a href="/" style={{color:'#00acee'}}><i class="fab fa-twitter fa-2x"></i></a>
             </div>
-            <div className="footitems" style={{display:'flex',alignItems:'center',justifyContent:'center',columnGap:'20px',fontSize:'12px',borderBottom:'0.5px solid grey',width:'100%',paddingBottom:'15px'}}>
+            <div className="footitems" style={{}}>
                 <a href="/">Advertise on gaana.com</a>
                 <a href="/">Terms of Use</a>
                 <a href="/">Privacy policy</a>

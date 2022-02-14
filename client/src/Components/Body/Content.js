@@ -1,10 +1,10 @@
-import Rightbar from "../Rightbar";
+import Rightbar from "./Rightbar";
 import InternalContent from "./InternalContent";
 import "./Content.css";
+import "../responsive.css";
 export default function Content(props){
     return (
-        <div className="content">
-            
+        <div className="content" >
                 <li>
             <InternalContent accessToken={props.accessToken} setcurrentTrack={props.setcurrentTrack}/>
                 </li>

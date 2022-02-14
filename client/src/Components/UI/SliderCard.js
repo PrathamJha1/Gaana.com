@@ -1,17 +1,18 @@
 import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
+import "../responsive.css";
 import { CardActionArea,CardContent } from '@mui/material';
 export default function ActionAreaCard(props) {
   const handlePlay = ()=>{
     props.chooseTrack(props.track);
   }
   return (
-    <Card sx={{width:400}} onClick={handlePlay} style={{cursor: 'pointer'}}>
+    <Card onClick={handlePlay} style={{cursor: 'pointer'}}>
       <CardActionArea>
         <CardMedia
+          className="slider"
           component="img"
-          height="400px"
           image={props.track.albumUrl}
         />
         <CardContent>

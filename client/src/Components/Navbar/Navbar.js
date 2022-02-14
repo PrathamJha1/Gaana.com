@@ -1,10 +1,10 @@
 import * as React from 'react';
+import "../responsive.css";
 import { Fragment } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import { Container } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import {DarkModeOutlined } from '@mui/icons-material';
@@ -15,6 +15,7 @@ import TrackSearchResult from './TrackSearchResult';
 import SecondNav from './SecondNav';
 import SearchIcon from '@mui/icons-material/Search';
 import "./Navbar.css";
+import "../responsive.css";
 import spotifyWebApi from "spotify-web-api-node";
 const spotifyApi = new spotifyWebApi({clientId:process.env.REACT_APP_CLIENT_ID});
 
@@ -76,8 +77,8 @@ export default function Navbar(props) {
     return (
      <Fragment >
 
-      <Box sx={{height:'121px'}}>
-      <AppBar position="fixed" sx={{backgroundColor:'rgba(138,137,142,.5);',color:'black',zIndex:'1201'}}>
+      <Box className="box">
+      <AppBar className="Navbox" position="fixed" sx={{backgroundColor:'darkgrey',color:'black',zIndex:'1201',alignItems:'flex-start'}}>
         <Toolbar className="nav">
         <IconButton
             size="large"
@@ -92,22 +93,22 @@ export default function Navbar(props) {
           <Typography variant="h6" component="div" sx={{width:'50px',color:'red'}}>
             Gaana
           </Typography>
-        <div>
+        <div className="search">
             <form className="form" >
                 {Searchicon}
                 <input type="search" className ={{onfocus}?"SearchInputExtended":"SearchInput"} placeholder='Search Artists,Songs,Albums' value={search} onChange={SearchHandler} onClick={onFocusHandler}/>
                 {onfocus && 
-                <Container  sx={{overflow:'auto',backgroundColor:'white',position:'fixed',height:'251px',width:'548px',marginLeft:'24px',marginTop:'282px',zIndex:'1201',borderTop:'1px solid grey',boxShadow:'0px 10px 12px 4px #888888',display:'flex',flexDirection:'column',justifyContent:'flex-start',alignItems:'flex-start',rowGap:'5px'}}>
-                    {searchResults.length===0 && <h4 style={{textAlign: 'center',width:'100%'}}>Search for any Song/Artist/Albums</h4>}
+                <div  className="Searchbar">
+                    {searchResults.length===0 && <h4 style={{display:'flex',justifyContent:'center',alignItems:'center',width:'100%',height:'50%'}}>Search for any Song/Artist/Albums</h4>}
                     {searchResults.map(track=>(
                       <TrackSearchResult track={track} key={track.uri} chooseTrack={chooseTrack}/>
                     ))}
-                </Container>}
+                </div>}
             </form>
         </div>
           <div className='Buttons'>
-              <button className="RedButton">Go Ad free <span>NEW</span></button>
-              <button className="RedButton">Get Gaana Plus</button>
+              <button className="RedButton1">Go Ad free <span>NEW</span></button>
+              <button className="RedButton2">Get Gaana Plus</button>
           </div>
           <div className='Iconbuttons'>
               <DarkModeOutlined className='icons' fontSize='medium' sx={{color:'#A4A9AD'}} />
@@ -115,7 +116,7 @@ export default function Navbar(props) {
           </div>
         </Toolbar>
       </AppBar>
-      <AppBar postion ="fixed" sx={{backgroundColor:"white"}}>
+      <AppBar className="Navshow" postion ="fixed" sx={{backgroundColor:"white"}}>
           <SecondNav></SecondNav>
       </AppBar>
       <AppBar color='default'>

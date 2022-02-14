@@ -1,4 +1,5 @@
 import './App.css';
+import {Container} from '@mui/material';
 import { Route } from 'react-router-dom';
 import Landingpage from './pages/Landingpage';
 import NewSongsPage from "./pages/NewSongsPage";
@@ -14,14 +15,14 @@ import Podcast from "./pages/Podcast";
 const code = new URLSearchParams(window.location.search).get('code');
 function App() {
   const accessToken = useAuth(code);
-  // console.log(code);
+  console.log(code);
   const [currentTrack,setcurrentTrack]=useState();
   return (
     <>
       {currentTrack && 
-      <div className="Player" style={{position:'fixed',marginTop:'750px',width:'100%',zIndex:'1500'}}>
+      <Container className="Player" style={{position:'fixed',marginTop:'750px',width:'100%',zIndex:'1500'}}>
       <Player accessToken={accessToken} track={currentTrack}/>
-      </div>}
+      </Container>}
       <Route path='/' exact>
           {code?<Landingpage accessToken={accessToken} setcurrentTrack={setcurrentTrack} />:<Login/>}
       </Route>

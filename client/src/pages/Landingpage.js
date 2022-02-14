@@ -1,4 +1,4 @@
-import Content from "../Components/UI/Content";
+import Content from "../Components/Body/Content";
 import Navbar from "../Components/Navbar/Navbar";
 import { Fragment } from "react";
 export default function Landingpage(props){

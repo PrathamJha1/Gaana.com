@@ -1,4 +1,5 @@
 import "./SecondNav.css";
+import "../responsive.css";
 import { Link } from "react-router-dom";
 import { KeyboardArrowDown } from "@mui/icons-material";
 export default function SecondNav(){

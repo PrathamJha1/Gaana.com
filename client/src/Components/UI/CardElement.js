@@ -3,16 +3,17 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { CardActionArea } from '@mui/material';
+import "../responsive.css";
 export default function CardElement(props) {
 const handlePlay = ()=>{
   props.chooseTrack(props.track);
 }
   return (
-    <Card sx={{ maxWidth: 345, width:150 ,cursor: 'pointer'}} onClick={handlePlay}>
+    <Card className="card" onClick={handlePlay}>
       <CardActionArea>
         <CardMedia
+          className="cardImage"
           component="img"
-          height="100"
           image={props.track.albumUrl}
         />
         <CardContent>

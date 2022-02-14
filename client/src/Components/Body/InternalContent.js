@@ -1,7 +1,7 @@
 import "./Content.css";
-import Carousal from "./Carousel";
-import ImageSlider from "./ImageSlider";
-import Footer from "./Footer";
+import Carousal from "../UI/Carousel";
+import ImageSlider from "../UI/ImageSlider";
+import Footer from "../UI/Footer";
 export default function InterContent(props){
     return (
         <ul className="Internalcontent">
