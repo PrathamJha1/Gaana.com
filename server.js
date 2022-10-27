@@ -12,8 +12,8 @@ app.post('/refresh',(req,res)=>{
     const refreshToken = req.body.refreshToken;
     const spotifyApi = new spotifyWebApi({
         redirectUri:'http://localhost:3000',
-        clientId:process.env.CLIENT_ID,
-        clientSecret:process.env.CLIENT_SECRET,
+        clientId:"6c96d619267643efbde91ad3fea91f14",
+        clientSecret:"325303e7e63044fa89d0efcf3ba0b01f",
         refreshToken,
     });
 spotifyApi.refreshAccessToken().then((data)=>{
@@ -32,8 +32,8 @@ app.post('/login',(req,res)=>{
     const code = req.body.code;
     const spotifyApi = new spotifyWebApi({
         redirectUri:'http://localhost:3000',
-        clientId:process.env.CLIENT_ID,
-        clientSecret:process.env.CLIENT_SECRET,
+        clientId:"6c96d619267643efbde91ad3fea91f14",
+        clientSecret:"325303e7e63044fa89d0efcf3ba0b01f",
     });
     spotifyApi.authorizationCodeGrant(code).then(data=>{
         res.json({
@@ -48,13 +48,6 @@ app.post('/login',(req,res)=>{
     })
 });
 
-//Serve production 
-if(process.env.NODE_ENV === 'production'){
-    app.use(express.static('client/build'));
-    app.get('*',(req,res)=>{
-        res.sendFile(path.resolve(__dirname,'client','build','index.html'));
-    })
-}
 
 app.listen(Port,()=>{
     console.log("Server is running on port 3001");

@@ -1,5 +1,5 @@
 //A Simple Login page that generates Access,Refresh,ExpiresIn Tokens from Spotify Web Api
-const Auth_URL="https://accounts.spotify.com/authorize?client_id=b03ceec374c242ec804f1da219af1d80&response_type=code&redirect_uri=http://localhost:3000&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state";
+const Auth_URL="https://accounts.spotify.com/authorize?client_id=6c96d619267643efbde91ad3fea91f14&response_type=code&redirect_uri=http://localhost:3000&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state";
 export default function Login(){
     
     return (
