@@ -20,7 +20,7 @@ function App() {
   return (
     <>
       {currentTrack && 
-      <Container className="Player" style={{position:'fixed',marginTop:'750px',width:'100%',zIndex:'1500'}}>
+      <Container className="Player" style={{position:'fixed',marginTop:'708px',width:'77.4%',zIndex:'1500'}}>
       <Player accessToken={accessToken} track={currentTrack}/>
       </Container>}
       <Route path='/' exact>
